@@ -1,7 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 SuperLibrary.iml
-domain/src/
-persistence/src/
-service/src/
-web/src/
+domain/target/
+persistence/target/
+service/target/
+web/target/

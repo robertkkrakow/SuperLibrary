@@ -2,6 +2,7 @@ package com.rk.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "author")
@@ -18,8 +19,12 @@ public class Author implements Serializable {
     @Column(name = "last_name", nullable = false)
     private String lastName;
 
-    @Column(name = "birth_place", nullable = false)
-    private String lastName;
+    @Column(name = "birth_place")
+    private String birthPlace;
+
+    @OneToMany(mappedBy = "book")
+    private List<Author> authors;
+
 
 
 }

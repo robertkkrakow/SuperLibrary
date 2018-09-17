@@ -3,6 +3,7 @@ package com.rk.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "book")
@@ -38,4 +39,7 @@ public class Book implements Serializable {
     @ManyToOne
     @JoinColumn(name = "author_id")
     private Author author;
+
+    @OneToMany(mappedBy = "book")
+    private List<Author> authors;
 }

@@ -23,7 +23,7 @@ public class Author implements Serializable {
     private String birthPlace;
 
     @OneToMany(mappedBy = "book")
-    private List<Author> authors;
+    private List<Book> books;
 
 
 
